@@ -1,6 +1,5 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.1
-ADD run.sh /run.sh
-RUN chmod -v +x /run.sh
-CMD ["/run.sh"]
+FROM centos:7
+COPY upone.sh /upone.sh
+CMD ["bash","./upone.sh"]
 
 
