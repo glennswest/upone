@@ -1,0 +1,19 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "upone"
+spec:
+  containers:
+    -
+      name: "upone"
+      image: "glennswest/upone"
+      volumeMounts:
+        -
+          mountPath: "/var/upone"
+          name: "uponevol"
+  volumes:
+    -
+      name: "uponevol"
+      persistentVolumeClaim:
+        claimName: "pvcupone"
+
