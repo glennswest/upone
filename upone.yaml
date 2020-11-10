@@ -6,10 +6,10 @@ spec:
   containers:
     -
       name: "upone"
-      image: "glennswest/upone"
+      image: "quay.io/glennswest/upone"
       volumeMounts:
         -
-          mountPath: "/var/upone"
+          mountPath: "/data"
           name: "uponevol"
   volumes:
     -
